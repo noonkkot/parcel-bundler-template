@@ -1,0 +1,19 @@
+$bgColor : black;
+
+@mixin center {
+  display: flex; justify-content: center; align-items: center;
+}
+/* 주석 */ /* 이 방법으로 작성해야 컴파일 된 이후 주석이 남아있다.*/
+// comment
+body {
+  background-color: $bgColor;
+}
+.container {
+  @include center;
+  h1 {
+    color: orange;
+    &+img {
+      width: 300px;
+    }
+  }
+}
